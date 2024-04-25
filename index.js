@@ -14,7 +14,7 @@ var src_default = {
 		 }
 		 else{
 			//anything other than a POST method will receive this message in plain text
-			 return new Response('Error Worker! Wrong Method!', {
+			 return new Response(JSON.stringify({message: 'Error Worker! Wrong Method!'}), {
 				 headers: {
 					 'content-type': 'text/plain',
 				 },
