@@ -13,10 +13,11 @@ var src_default = {
 			 });
 		 }
 		 else{
-			//anything other than a POST method will receive this message in plain text
+			//anything other than a POST method will receive this message in JSON format
 			 return new Response(JSON.stringify({message: 'Error Worker! Wrong Method!'}), {
 				 headers: {
 					 'content-type': 'text/plain',
+					//content-type doesn't seem to affect the output format
 				 },
 			 });
 		 }
