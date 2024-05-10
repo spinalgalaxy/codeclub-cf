@@ -13,12 +13,12 @@ var src_default = {
 			4: "x-ray vision",
 		};
 
-		if (request.method === 'GET') {
-			return Response.json({ message: "This is your random superpower: " + superPowerMap[rnd_num] });
+		if (request.method === 'GET' && request.cf.botManagement.score >= 30) {
+			return Response.redirect("https://developers.cloudflare.com");
 		}
 		else {
 
-			return Response.json({ message: "ERROR! Wrong Method!!" });
+			return Response.redirect("https://httpbin.org");
 
 		}
 	}
