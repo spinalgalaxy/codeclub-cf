@@ -5,7 +5,10 @@ var src_default = {
 		//evaluate correct method and likely human score >= 30
 		//use the cf.botManagement.score property to obtain the score
 		//this could also be added to a variable [e.g.: const bot_score = request.cf.botManagement.score]
-		if (request.method === 'GET' && request.cf.botManagement.score >= 30) {
+		const bot_score = request.cf.botManagement.score;
+		const human_threshold = 30;
+
+		if (request.method === 'GET' && bot_scoree >= human_threshold) {
 			return Response.redirect("https://developers.cloudflare.com");
 		}
 		else {
