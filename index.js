@@ -8,7 +8,7 @@ var src_default = {
 		const bot_score = request.cf.botManagement.score;
 		const bot_threshold = 30;
 
-		if (request.method === 'GET' && bot_scoree >= bot_threshold) {
+		if (request.method === 'GET' && bot_score >= bot_threshold) {
 			return Response.redirect("https://developers.cloudflare.com");
 		}
 		else {
